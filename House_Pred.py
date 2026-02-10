@@ -15,10 +15,11 @@ def load_model():
 model = load_model()
 
 # Full feature list as required by your model's training schema
-all_features = ['Area', 'Bedrooms', 'Baths', 'Location_B-17', 'Location_Bahria', 'Location_Bani', 'Location_Bhara', 'Location_CBR', 'Location_Capital', 'Location_Chak', 'Location_Chatha', 'Location_Constitution', 'Location_D-12', 'Location_D-17', 'Location_DHA', 'Location_E-11', 'Location_E-16', 'Location_E-17', 'Location_E-18', 'Location_E-7', 'Location_Emaar', 'Location_F-10', 'Location_F-11', 'Location_F-15', 'Location_F-17', 'Location_F-6', 'Location_F-7', 'Location_F-8', 'Location_FECHS', 'Location_Faisal', 'Location_G-10', 'Location_G-11', 'Location_G-12', 'Location_G-13', 'Location_G-14', 'Location_G-15', 'Location_G-16', 'Location_G-6', 'Location_G-7', 'Location_G-8', 'Location_G-9', 'Location_Ghauri', 'Location_Green', 'Location_Gulberg', 'Location_Gulshan-e-Khudadad', 'Location_H-13', 'Location_I-10', 'Location_I-11', 'Location_I-13', 'Location_I-14', 'Location_I-8', 'Location_I-9', 'Location_Khanna', 'Location_Korang', 'Location_Kuri', 'Location_Lehtarar', 'Location_Margalla', 'Location_Meherban', 'Location_Mumtaz', 'Location_National', 'Location_Naval', 'Location_PWD', 'Location_Pakistan', 'Location_Park', 'Location_Police', 'Location_Shah', 'Location_Shehzad', 'Location_Soan', 'Location_Taramrri', 'Location_Tarlai', 'Location_Tarnol', 'Location_Top', 'Location_University', 'Location_Zaraj']
+all_features = ['Area', 'Bedrooms', 'Baths', 'Location_B-17', 'Location_Bahria', 'Location_Bani', 'Location_Bhara', 'Location_CBR', 'Location_Capital', 'Location_Chak', 'Location_Chatha', 'Location_Constitution', 'Location_D-12', 'Location_D-17', 'Location_DHA', 'Location_E-11', 'Location_E-16', 'Location_E-17', 'Location_E-18', 'Location_E-7', 'Location_Emaar', 'Location_F-10', 'Location_F-11', 'Location_F-15', 'Location_F-17', 'Location_F-6', 'Location_F-7', 'Location_F-8', 'Location_FECHS', 'Location_Faisal', 'Location_G-10', 'Location_G-11', 'Location_G-12', 'Location_G-13', 'Location_G-14', 'Location_G-15', 'Location_G-16', 'Location_G-6', 'Location_G-7', 'Location_G-8', 'Location_G-9', 'Location_Ghauri', 'Location_Green', 'Location_Gulberg', 'Location_Gulshan-e-Khudadad', 'Location_H-13', 'Location_I-10', 'Location_I-11', 'Location_I-13', 'Location_I-14', 'Location_I-8', 'Location_I-9', 'Location_Khanna', 'Location_Korang', 'Location_Kuri', 'Location_Lehtarar', 'Location_Margalla', 'Location_Meherban', 'Location_Mumtaz', 'Location_National', 'Location_Naval', 'Location_PWD', 'Location_Park', 'Location_Police', 'Location_Shah', 'Location_Shehzad', 'Location_Soan', 'Location_Taramrri', 'Location_Tarlai', 'Location_Tarnol', 'Location_Top', 'Location_University', 'Location_Zaraj']
 
 st.set_page_config(page_title="Islamabad Property Predictor", page_icon="🏡")
 st.title("🏡 Islamabad Property Price Predictor")
+st.markdown("### 🏡 Islamabad Property Price Predictor")
 
 # UI Layout
 col1, col2 = st.columns(2)
@@ -47,3 +48,4 @@ if st.button("Predict Price", use_container_width=True):
 
     st.success(f"### Estimated Price: PKR {final_price:,.2f} Lakh")
     st.caption(f"Log Output: {prediction:.4f}")
+
