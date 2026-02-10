@@ -7,10 +7,11 @@ import os
 # 1. Load the model safely
 @st.cache_resource
 def load_model():
-    # This looks in the same folder as this script
-    model_path = os.path.join(os.path.dirname(__file__), "model_perfect_pipeline.pkl")
-    if not os.path.exists(model_path):
-        st.error(f"File NOT found at {model_path}. Check GitHub file name!")
+    # Use direct filename since it's in the same root directory as your script
+    try:
+        return joblib.load("model_perfect_pipeline.pkl")
+    except FileNotFoundError:
+        st.error("Model file not found. Ensure 'model_perfect_pipeline.pkl' is in the root of your GitHub repo.")
         st.stop()
     return joblib.load(model_path)
 
@@ -52,5 +53,6 @@ if st.button("Predict Price", use_container_width=True):
     final_price = np.expm1(raw_pred) if raw_pred < 50 else raw_pred
     
     st.success(f"### Estimated Price: PKR {final_price:,.0f} Lakh")
+
 
 
