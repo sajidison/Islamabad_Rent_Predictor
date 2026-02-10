@@ -6,7 +6,7 @@ import os
 
 # Get the directory of the current script to ensure the model file is found
 base_path = os.path.dirname(__file__)
-model_path = os.path.join(base_path, "model_perfect_pipeline.pkl")
+model_path = os.path.join(base_path, "model.pkl")
 
 # Load the model with error handling
 if os.path.exists(model_path):
@@ -47,3 +47,4 @@ if st.button("Predict Price", use_container_width=True):
 
     st.balloons()
     st.success(f"### Estimated Price: PKR {final_price:,.0f}")
+
