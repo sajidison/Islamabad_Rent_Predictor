@@ -19,7 +19,7 @@ all_features = ['Area', 'Bedrooms', 'Baths', 'Location_B-17', 'Location_Bahria',
 
 st.set_page_config(page_title="Islamabad Property Predictor", page_icon="🏡")
 #st.title("🏡 Islamabad Property Price Predictor")
-st.markdown("# 🏡 Islamabad Property Price Predictor")
+st.markdown("## 🏡 Islamabad Property Price Predictor")
 
 # UI Layout
 col1, col2 = st.columns(2)
@@ -48,3 +48,4 @@ if st.button("Predict Price", use_container_width=True):
 
     st.success(f"### Estimated Price: PKR {final_price:,.2f} Lakh")
     st.caption(f"Log Output: {prediction:.4f}")
+
